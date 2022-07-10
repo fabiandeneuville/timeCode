@@ -46,7 +46,7 @@ function setDefaultValue(input) {
 // CLEAR FUNCTION
 clearBtn.addEventListener('click', clearFields);
 function clearFields() {
-    inputs.forEach((input) => input.value = "");
+    inputs.forEach((input) => input.value = "0");
     resultDisplay.textContent = "00:00:00:00";
 }
 // CALCULATE FUNCTION
@@ -59,15 +59,33 @@ function calculate() {
     hInputs.forEach((input) => tempResultH += parseInt(input.value));
     if (tempResultI >= rateValue) {
         tempResultI = tempResultI - rateValue;
-        tempResultS += 1;
+        if (tempResultI >= rateValue) {
+            tempResultI = tempResultI - rateValue;
+            tempResultS += 2;
+        }
+        else {
+            tempResultS += 1;
+        }
     }
     if (tempResultS >= 60) {
         tempResultS = tempResultS - 60;
-        tempResultM + 1;
+        if (tempResultS >= 60) {
+            tempResultS = tempResultS - 60;
+            tempResultM += 2;
+        }
+        else {
+            tempResultM += 1;
+        }
     }
     if (tempResultM >= 60) {
         tempResultM = tempResultM - 60;
-        tempResultH + 1;
+        if (tempResultM >= 60) {
+            tempResultM = tempResultM - 60;
+            tempResultH += 2;
+        }
+        else {
+            tempResultH += 1;
+        }
     }
     resultH = renderResult(tempResultH);
     resultM = renderResult(tempResultM);
