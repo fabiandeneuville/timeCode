@@ -6,7 +6,8 @@
 }
 
 body {
-    background: #333;
+    height: 100vh;
+    background: linear-gradient(45deg, #34495E, #41B883);
 }
 
 .main-container {
@@ -14,7 +15,8 @@ body {
     margin: 25px auto;
     min-width: 300px;
     background: linear-gradient(45deg, lightgrey, white, lightgrey);
-
+    box-shadow: 5px 5px 15px 0px #333;
+    border-radius: 5px;
 }
 
 .heading {
@@ -29,6 +31,10 @@ body {
 h1 {
     width: 100%;
     text-align: center;
+}
+
+.rate-input {
+    cursor: pointer;
 }
 
 .time-code-item {
@@ -47,11 +53,31 @@ h1 {
     border-radius: 5px;
 }
 
-.calculate-btn {
-    display: block;
-    width: 75px;
-    margin: 25px auto 5px auto;
+
+.btn-block {
+    display: flex;
+    justify-content: center;
+    padding: 25px;
 }
+
+.btn {
+    margin: 5px;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid #333;
+    transition: all 0.3s ease;
+}
+
+.calculate-btn:hover {
+    background-color: #41B883;
+    color: white;
+}
+
+.clear-btn:hover {
+    background-color: orange;
+}
+
 
 .result {
     text-align: center;

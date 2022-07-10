@@ -16,30 +16,32 @@
         <div class="heading">
             <h1>Time-Code calculator</h1>
             <label for="rate">Images per seconde :&nbsp</label>
-            <select id="rate">
+            <select id="rate" class="rate-input">
                 <option value=24>24</option>
                 <option value=25>25</option>
                 <option value=30>30</option>
             </select>
         </div>
-
-        <div class="time-code-item">
-            <input class="time-code-h-input" type="number"><span class="separator">:</span>
-            <input class="time-code-m-input" type="number"><span class="separator">:</span>
-            <input class="time-code-s-input" type="number"><span class="separator">:</span>
-            <input class="time-code-i-input" type="number">
-            <span class="error-msg"></span>
+        
+        <div class="time-code-items-container">
+            <div class="time-code-item">
+                <input class="time-code-h-input test" type="number"><span class="separator">:</span>
+                <input class="time-code-m-input" type="number"><span class="separator">:</span>
+                <input class="time-code-s-input" type="number"><span class="separator">:</span>
+                <input class="time-code-i-input" type="number">
+            </div>
+            <div class="time-code-item">
+                <input class="time-code-h-input" type="number"><span class="separator">:</span>
+                <input class="time-code-m-input" type="number"><span class="separator">:</span>
+                <input class="time-code-s-input" type="number"><span class="separator">:</span>
+                <input class="time-code-i-input" type="number">
+            </div>
+    
         </div>
-        <div class="time-code-item">
-            <input class="time-code-h-input" type="number"><span class="separator">:</span>
-            <input class="time-code-m-input" type="number"><span class="separator">:</span>
-            <input class="time-code-s-input" type="number"><span class="separator">:</span>
-            <input class="time-code-i-input" type="number">
-            <span class="error-msg"></span>
+        <div class="btn-block">
+            <button class="btn calculate-btn">Calculate</button>
+            <button class="btn clear-btn">Clear</button>
         </div>
-
-        <button class="calculate-btn">Calculate</button>
-
         <span class="validation-msg"></span>
 
         <p class="result"></p>
